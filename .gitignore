@@ -1,0 +1,58 @@
+# Created by venv; see https://docs.python.org/3/library/venv.html
+#*
+# Ignore Python cache files
+*.pyc
+*.pyec
+
+# Ignore configuration files
+*.cfg
+
+# Ignore folders
+Script/
+Share/
+Include/
+# Ignore virtual environment directories
+venv/
+env/
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+# Ignore Python bytecode files
+__pycache__/
+# Ignore logs
+*.log
+# Ignore coverage reports
+*.coverage
+# Ignore test results
+*.xml
+# Ignore data files
+#*.csv
+#*.json
+# Ignore model files
+*.pkl
+# Ignore temporary files
+*.tmp
+# Ignore IDE specific files
+.idea/
+# Ignore system files
+.DS_Store
+# Ignore environment files
+.env
+# Ignore build directories
+build/
+# Ignore distribution directories
+dist/
+# Ignore package management files
+*.egg-info/
+# Ignore Python wheel files
+*.whl
+# Ignore Docker files
+#Dockerfile
+#docker-compose.yml
+# Ignore virtual environment files
+*.venv
+# Ignore Python egg files
+*.egg
+# Ignore coverage directories
+.coverage/
+# Ignore test directories
+tests/

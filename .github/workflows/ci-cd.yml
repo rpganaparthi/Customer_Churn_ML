@@ -1,0 +1,37 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-test-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v3
+      with:
+        python-version: 3.11
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+
+    - name: Run training
+      run: |
+        python src/train_model.py
+
+    - name: Run tests
+      run: |
+        python src/evaluate_model.py
+
+    - name: Build Docker image
+      run: docker build -t churn-api .
+
+    - name: Deploy to EC2 (example)
+      run: |
+        echo "scp and ssh commands to EC2"
