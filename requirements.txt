@@ -6,3 +6,4 @@ pandas
 joblib
 mlflow
 prometheus-client
+pytest        
