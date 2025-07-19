@@ -8,9 +8,11 @@
 *.cfg
 
 # Ignore folders
-Script/
+Scripts/
 Share/
 Include/
+Lib/
+mlruns/
 # Ignore virtual environment directories
 venv/
 env/

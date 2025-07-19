@@ -5,3 +5,4 @@ xgboost
 pandas
 joblib
 mlflow
+prometheus-client

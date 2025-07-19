@@ -1,9 +1,24 @@
-FROM python:3.11
+# Dockerfile
 
+FROM python:3.11-slim
+
+# Set workdir
 WORKDIR /app
 
-COPY . .
+# Install dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
-RUN pip install --upgrade pip && pip install -r requirements.txt
+# Copy source code
+COPY ./src ./src
+COPY model.joblib .  
+COPY .env .env       
 
-CMD ["uvicorn", "api.main:app", "--host", "0.0.0.0", "--port", "8000"]
+# Set environment
+ENV PYTHONPATH=/app
+
+# Expose port
+EXPOSE 8000
+
+# Start FastAPI server
+CMD ["uvicorn", "src.main:app", "--host", "0.0.0.0", "--port", "8000"]

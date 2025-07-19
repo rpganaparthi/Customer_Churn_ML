@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Response
 import pandas as pd
 from joblib import load
 from src.train_model import train
