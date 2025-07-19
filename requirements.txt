@@ -7,4 +7,5 @@ joblib
 mlflow
 prometheus-client
 pytest
-httpx           
+httpx
+pytest-cov        
